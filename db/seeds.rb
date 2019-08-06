@@ -7,10 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+Article.destroy_all
+
 10.times do
   article = Article.new(
     title: Faker::Book.title,
-    content: Faker::Quotes::Shakespeare
+    content: Faker::Quotes::Shakespeare.hamlet_quote
   )
   article.save!
 end
