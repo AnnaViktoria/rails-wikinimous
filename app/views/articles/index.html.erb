@@ -1,11 +1,18 @@
-<h1>All Articles</h1>
 
-
-<ul>
-<% @articles.each do |article| %>
-<li><%= link_to article.title, article_path(article)  %> </li>
-<%= link_to 'edit an article', edit_article_path(article) %>
-<% end %>
-</ul>
-
-<%= link_to 'Add a new article', new_article_path  %>
+<div class= container>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <ul>
+        <% @articles.each do |article| %>
+        <li> <h2><%= link_to article.title, article_path(article) %></h2>
+          <h3> <%=article.content%> </h3>
+        </li>
+        <%= link_to 'Edit an article -', edit_article_path(article) %>
+        <%= link_to "Delete", article_path(article),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,50 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ul {
+  list-style:none
+}
+
+h3 {
+  text-weight: lighter;
+}
+// .container {
+//   display: flex;
+//   justify-content: space-around
+// }
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: right;
+}
+
+.navbar-collapse:before, .navbar-collapse:after {
+    content: " ";
+    display: table;
+}
+
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+}

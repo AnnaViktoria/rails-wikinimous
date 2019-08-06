@@ -1,13 +1,19 @@
 <h1>Create a New Article</h1>
 
+<div class= container>
 <%= form_for(@article) do |f| %>
+<div class="form-group">
   <%= f.label :title %>
   <%= f.text_field :title %>
+</div>
 
+<div class="form-group">
   <%= f.label :content %>
   <%= f.text_field :content %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
+</div>
 
 <%= link_to 'Back to Articles', articles_path  %>
